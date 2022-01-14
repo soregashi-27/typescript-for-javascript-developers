@@ -18,4 +18,12 @@ npm install --save-dev typescript@3.7.5
 
     $ npm run dev src/default-parameters.ts
 
+npxでもできる
 
+例
+```
+npx tsc src/install-typescript.ts
+```
+
+npxコマンドはnode modules配下のソースを自動で探してくれる
+（laravel, vueの個人開発でよく使ってる）
