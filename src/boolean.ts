@@ -13,5 +13,7 @@ let name = 'TypeScript';
 
 let isFinished: boolean = true;
 isFinished = false;
-// isFinished = 1;
+//isFinished = 1;
 console.log({ isFinished });
+
+//ts-nodev8.6.2の不具合は2022.1.18現在解消されていた
