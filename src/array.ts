@@ -21,7 +21,7 @@ let numbers2: Array<number> = [1, 2, 3];
 let strings2: Array<string> = ['Tokyo', 'Osaka', 'Kyoto'];
 // 非推奨の書き方 fin
 
-// アノテーション
+// annotation（情報の補足的なやつ）
 let strings: string[] = ['TypeScript', 'JavaScript', 'CoffeeScript'];
 
 let nijigenHairetsu: number[][] = [
