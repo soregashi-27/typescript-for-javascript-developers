@@ -26,7 +26,27 @@ let url: string =
 //   console.log(response.data);
 // });
 
+// axios.get(url).then(function (response) {
+//   let data: object[];
+//   data = response.data;
+//   console.log(data);
+// });
+//↑こう書いてもいいが、interfaceを使うともっときれいになる
+
+/*
+Interface
+クラス同士をつなぐ役割をもってる（"継承"って概念）
+※Interfaceのみでは何の処理も行えない
+*/
+
+//Interfaceを使った書き方
 axios.get(url).then(function (response) {
+  interface Article {
+    id: number;
+    title: string;
+    description: string;
+  }
+
   let data: object[];
   data = response.data;
   console.log(data);
