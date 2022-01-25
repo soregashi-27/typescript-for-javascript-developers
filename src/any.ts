@@ -31,7 +31,8 @@ let url: string =
 //   data = response.data;
 //   console.log(data);
 // });
-//↑こう書いてもいいが、interfaceを使うともっときれいになる
+//↑こう書いてもいいが、objectの中身がなんなのかがわからないし、わかりづらい
+//そこで、interfaceを使うともっときれいになる
 
 /*
 Interface
@@ -47,7 +48,20 @@ axios.get(url).then(function (response) {
     description: string;
   }
 
-  let data: object[];
+  // let data: object[];
+  //↓こう書くとわかりやすいし、Articleの中身も明確になる。
+  let data: Article[];
+  // let data: any;
+  //any型を使ってしまうと、エラーに気づきづらくなる。TypeScriptの強みを活かすならanyは極力使わないこと。（使ったから必ずリファクタリング）
   data = response.data;
+
+  //dataを上書きして挙動を検証してみる
+  data = [
+    {
+      id: 1,
+      title: 'titleUpdate',
+      description: 'description',
+    },
+  ];
   console.log(data);
 });
